@@ -1,0 +1,207 @@
+.header-container{
+  height: 56px;
+  width: 1260px;
+  margin: 0 10px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.header-container,
+.left-section,
+.menu-icon-container,
+.yt-premium-icon-container,
+.middle-section,
+.search-bar-container,
+.searchbar-voicesearch-container,
+.search-icon-container,
+.voice-search-icon-container,
+.right-section,
+.create-icon-container,
+.notifications-container,
+.channel-picture-container
+{
+display: flex;
+}
+.menu-icon-container,
+.yt-premium-icon-container,
+.right-section
+{
+  height: 56px;
+}
+.menu-icon-container,
+.yt-premium-icon-container,
+.search-icon-container,
+.voice-search-icon-container,
+.right-section,
+.create-icon-container,
+.notifications-container,
+.channel-picture-container
+{
+  align-items: center;
+  justify-content: center;
+}
+.left-section{
+  column-gap: 10px;
+}
+.menu-icon-container,
+.search-icon-container,
+.voice-search-icon-container,
+.create-icon-container:hover,
+.notifications-icon-container:hover
+{
+  transition: opacity 0.15s;
+}
+.menu-icon{
+  width: 50%;
+  height: 60%;
+  padding: 2px 7px;
+}
+.menu-icon:hover,
+.create-icon:hover,
+.notifications-icon:hover
+{
+  border-radius: 50%;
+}
+.menu-icon:hover,
+.search-icon-container:hover,
+.voice-search-icon-container:hover,
+.create-icon:hover,
+.notifications-icon:hover
+{
+  cursor: pointer;
+  background-color: rgba(192, 190, 190, 0.4);
+  opacity: 1;
+}
+.yt-premium-icon{
+  width: 100%;
+  height: 62%;
+  margin-top: -5px;
+}
+
+.middle-section{
+  width: 700px;
+  margin-left: 40px;
+  justify-content: end;
+  padding-right: 62px;
+}
+.searchbar-voicesearch-container{
+  height: 40px;
+}
+.search-icon-container,
+.searchbar
+{
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.searchbar:focus{
+  border: 1px solid blue;
+  box-shadow: inset 0px 1px 3px rgba(65, 65, 65, 0.4);
+  background: url(https://supersimple.dev/public/img/exercises/youtube/icons/search.svg)
+  no-repeat 15px 8px;
+  background-size: 4%;
+  padding-left: 50px;
+} 
+.searchbar{
+  width: 515px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding-left: 20px;
+  outline: none;
+  font-size: 16px;
+  box-shadow: inset 0px 0px 2px rgba(113, 113, 113, 0.393);
+}
+.searchbar::placeholder{
+  font-size: 16px;
+  color: rgb(137, 135, 135);
+}
+
+.search-icon-container{
+  background-color: rgb(248, 248, 248);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-left: none;
+  padding: 0px 16px;
+}
+.search-icon{
+  width: 79%;
+  height: 80%;
+}
+.voice-search-icon-container{
+  margin-left: 13px;
+  border-radius: 50px;
+}
+.voice-search-icon{
+  width: 60%;
+  height: 100%;
+}
+.right-section{
+  width: 180px;
+  column-gap: 5px;
+}
+.create-icon-container,
+.notifications-container,
+.channel-picture-container
+{
+  width: 50px;
+}
+.create-icon,
+.notifications-icon
+{
+  width: 50%;
+  padding: 5px;
+}
+.channel-picture{
+  width: 80%;
+  border-radius: 30px;
+}
+.tooltip,
+.notif-count
+{
+  position: absolute;
+}
+
+.tooltip{
+  bottom: -60px;
+  background-color: grey;
+  color: white;
+  padding: 10px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.search-icon-container,
+.voice-search-icon-container,
+.create-icon-container,
+.notifications-container
+{
+  position: relative;
+  transition: opacity 0.15s;
+}
+
+.search-icon-container:hover .tooltip,
+.voice-search-icon-container:hover .tooltip,
+.create-icon-container:hover .tooltip,
+.notifications-container:hover .tooltip
+{
+  opacity: 1;
+}
+
+.notif-count-container{
+  position: relative;
+}
+.notif-count{
+  color: white;
+  font-size: 10px;
+  background-color: rgb(204, 0, 0);
+  padding: 2px 5px;
+  border: 2px solid white;
+  border-radius: 20px;
+  right: -2px;
+  top: -28px;
+}
